@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-export default function HomePage() {
+export default function Home() {
     return <div>
         <div className="flex flex-col items-center mt-12 mb-8 gap-2">
             <h1 className="text-5xl font-black tracking-tight text-primary">BLEACHDLE</h1>
