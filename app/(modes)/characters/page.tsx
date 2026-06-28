@@ -1,3 +1,5 @@
+"use client";
+
 import { ActivityIcon } from "@/components/icons/lucide-activity";
 import Hints from "@/components/shared/Hints";
 import {
@@ -7,8 +9,14 @@ import {
     CardFooter,
     CardHeader
 } from "@/components/ui/card";
+import { useState } from "react"
+
 
 export default function CharactersModePage() {
+    const [attemptFirstHint, setAttemptFirstHint] = useState(4);
+    const [attemptSecondHint, setAttemptSecondHint] = useState(7);
+
+
     return <div className="px-4">
         <Card className="max-w-xl mx-auto">
             <CardHeader>
@@ -16,8 +24,14 @@ export default function CharactersModePage() {
             </CardHeader>
             <CardContent>
                 <Hints
-                    hint1={{ icon: <ActivityIcon />, description: "Indice de l'état vital dans" }}
-                    hint2={{ icon: <ActivityIcon />, description: "Indice de l'état vital dans" }} />
+                    hint1={{
+                        icon: <ActivityIcon />,
+                        description: "Indice de l'état vital dans " + attemptFirstHint + " essais"
+                    }}
+                    hint2={{
+                        icon: <ActivityIcon />,
+                        description: "Indice de l'état vital dans " + attemptSecondHint + " essais"
+                    }} />
             </CardContent>
             <CardFooter>
                 <p>Les données vont jusqu'à la fin de l'arc Thousand-Year Blood War</p>
