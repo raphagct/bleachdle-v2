@@ -1,6 +1,6 @@
 "use client";
 
-import { ActivityIcon } from "@/components/icons/lucide-activity";
+import { User, BookOpen } from "lucide-react";
 import Hints from "@/components/shared/Hints";
 import {
     Card,
@@ -30,12 +30,12 @@ export default function QuotesModePage() {
                 </blockquote>
                 <Hints
                     hint1={{
-                        icon: <ActivityIcon />,
-                        description: "Indice de l'état vital dans " + attemptFirstHint + " essais"
+                        icon: <User />,
+                        description: "Indice du destinataire dans " + attemptFirstHint + " essais"
                     }}
                     hint2={{
-                        icon: <ActivityIcon />,
-                        description: "Indice de l'état vital dans " + attemptSecondHint + " essais"
+                        icon: <BookOpen />,
+                        description: "Indice d'arc dans " + attemptSecondHint + " essais"
                     }} />
             </CardContent>
             <CardFooter>

@@ -1,6 +1,6 @@
 "use client";
 
-import { ActivityIcon } from "@/components/icons/lucide-activity";
+import { Activity, EyeOff } from "lucide-react";
 import Hints from "@/components/shared/Hints";
 import {
     Card,
@@ -25,12 +25,12 @@ export default function CharactersModePage() {
             <CardContent>
                 <Hints
                     hint1={{
-                        icon: <ActivityIcon />,
+                        icon: <Activity />,
                         description: "Indice de l'état vital dans " + attemptFirstHint + " essais"
                     }}
                     hint2={{
-                        icon: <ActivityIcon />,
-                        description: "Indice de l'état vital dans " + attemptSecondHint + " essais"
+                        icon: <EyeOff />,
+                        description: "Indice du personnage flouté dans " + attemptSecondHint + " essais"
                     }} />
             </CardContent>
             <CardFooter>
