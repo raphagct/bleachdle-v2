@@ -13,7 +13,7 @@ export type Character = {
 export const characters: Character[] = [
   {
     id: 1,
-    image_url: '',
+    image_url: '/ichigo.jpg',
     name: 'Ichigo Kurosaki',
     gender: 'Homme',
     race: ['Humain', 'Shinigami', 'Hollow', 'Quincy'],
@@ -24,7 +24,7 @@ export const characters: Character[] = [
   },
   {
     id: 2,
-    image_url: '',
+    image_url: '/rukia.jpg',
     name: 'Rukia Kuchiki',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -35,7 +35,7 @@ export const characters: Character[] = [
   },
   {
     id: 3,
-    image_url: '',
+    image_url: '/renji.jpg',
     name: 'Renji Abarai',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -46,7 +46,7 @@ export const characters: Character[] = [
   },
   {
     id: 4,
-    image_url: '',
+    image_url: '/byakuya.jpg',
     name: 'Byakuya Kuchiki',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -57,7 +57,7 @@ export const characters: Character[] = [
   },
   {
     id: 5,
-    image_url: '',
+    image_url: '/toshiro.jpg',
     name: 'Tōshirō Hitsugaya',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -68,7 +68,7 @@ export const characters: Character[] = [
   },
   {
     id: 6,
-    image_url: '',
+    image_url: '/zaraki.jpg',
     name: 'Kenpachi Zaraki',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -79,7 +79,7 @@ export const characters: Character[] = [
   },
   {
     id: 7,
-    image_url: '',
+    image_url: '/aizen.jpg',
     name: 'Sōsuke Aizen',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -90,7 +90,7 @@ export const characters: Character[] = [
   },
   {
     id: 8,
-    image_url: '',
+    image_url: '/gin.jpg',
     name: 'Gin Ichimaru',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -101,7 +101,7 @@ export const characters: Character[] = [
   },
   {
     id: 9,
-    image_url: '',
+    image_url: '/uryu.jpg',
     name: 'Uryū Ishida',
     gender: 'Homme',
     race: ['Quincy', 'Humain'],
@@ -112,7 +112,7 @@ export const characters: Character[] = [
   },
   {
     id: 10,
-    image_url: '',
+    image_url: '/orihime.jpg',
     name: 'Orihime Inoue',
     gender: 'Femme',
     race: ['Humain'],
@@ -123,7 +123,7 @@ export const characters: Character[] = [
   },
   {
     id: 11,
-    image_url: '',
+    image_url: '/urahara.jpg',
     name: 'Kisuke Urahara',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -134,7 +134,7 @@ export const characters: Character[] = [
   },
   {
     id: 12,
-    image_url: '',
+    image_url: '/yoruichi.jpg',
     name: 'Yoruichi Shihōin',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -145,7 +145,7 @@ export const characters: Character[] = [
   },
   {
     id: 13,
-    image_url: '',
+    image_url: '/grimmjow.jpg',
     name: 'Grimmjow Jaegerjaquez',
     gender: 'Homme',
     race: ['Arrancar'],
@@ -156,7 +156,7 @@ export const characters: Character[] = [
   },
   {
     id: 14,
-    image_url: '',
+    image_url: '/ulquiorra.jpg',
     name: 'Ulquiorra Cifer',
     gender: 'Homme',
     race: ['Arrancar'],
@@ -167,7 +167,7 @@ export const characters: Character[] = [
   },
   {
     id: 15,
-    image_url: '',
+    image_url: '/shinji.jpg',
     name: 'Shinji Hirako',
     gender: 'Homme',
     race: ['Shinigami', 'Visored'],
@@ -178,7 +178,7 @@ export const characters: Character[] = [
   },
   {
     id: 16,
-    image_url: '',
+    image_url: '/rangiku.jpg',
     name: 'Rangiku Matsumoto',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -189,7 +189,7 @@ export const characters: Character[] = [
   },
   {
     id: 17,
-    image_url: '',
+    image_url: '/shunsui.jpg',
     name: 'Shunsui Kyōraku',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -200,7 +200,7 @@ export const characters: Character[] = [
   },
   {
     id: 18,
-    image_url: '',
+    image_url: '/tosen.jpg',
     name: 'Kaname Tōsen',
     gender: 'Homme',
     race: ['Shinigami', 'Visored'],
@@ -211,7 +211,7 @@ export const characters: Character[] = [
   },
   {
     id: 19,
-    image_url: '',
+    image_url: '/yhwach.jpg',
     name: 'Yhwach',
     gender: 'Homme',
     race: ['Quincy'],
@@ -222,7 +222,7 @@ export const characters: Character[] = [
   },
   {
     id: 20,
-    image_url: '',
+    image_url: '/mayuri.jpg',
     name: 'Mayuri Kurotsuchi',
     gender: 'Homme',
     race: ['Shinigami'],

@@ -25,8 +25,8 @@ export default function () {
                 <ComboboxList>
                     {(character) => (
                         <ComboboxItem key={character.id} value={character}>
-                            <Image src={AizenPic}
-                             alt="Aizen icon"
+                            <Image src={character.image_url}
+                             alt={character.image_url + "icon"}
                              width={60}
                              height={60} />
                             <span>{character.name}</span>
