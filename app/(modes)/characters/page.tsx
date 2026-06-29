@@ -10,7 +10,7 @@ import {
     CardHeader
 } from "@/components/ui/card";
 import { useState } from "react"
-
+import CharacterSearch from "@/components/shared/CharacterSearch";
 
 export default function CharactersModePage() {
     const [attemptFirstHint, setAttemptFirstHint] = useState(4);
@@ -18,9 +18,9 @@ export default function CharactersModePage() {
 
 
     return <div className="px-4">
-        <Card className="max-w-xl mx-auto">
+        <Card className="max-w-lg mx-auto">
             <CardHeader>
-                <CardTitle>Devinez le personnage de Bleach du jour</CardTitle>
+                <CardTitle>Devine le personnage de Bleach d'aujourd'hui!</CardTitle>
             </CardHeader>
             <CardContent>
                 <Hints
@@ -37,5 +37,6 @@ export default function CharactersModePage() {
                 <p>Les données vont jusqu'à la fin de l'arc Thousand-Year Blood War</p>
             </CardFooter>
         </Card>
+        <CharacterSearch />
     </div>
 }

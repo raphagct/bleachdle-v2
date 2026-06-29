@@ -24,7 +24,7 @@ export function ModeHeader() {
 
     return (
         <div className="mb-8">
-            <div className="flex flex-col items-center mt-12 mb-8 gap-2">
+            <div className="flex flex-col items-center mt-4 mb-8 gap-2">
                 <h1 className="text-5xl font-black tracking-tight text-primary">BLEACHDLE</h1>
             </div>
             <Breadcrumb>
