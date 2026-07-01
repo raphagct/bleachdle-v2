@@ -18,7 +18,7 @@ export default function Page() {
 
             <div className="flex flex-col items-center gap-4 mt-6">
                 {MENU_ITEMS.map((item) => (
-                    <Button key={item.name} size="xxl" className="w-64" asChild>
+                    <Button key={item.name} size="lg" className="w-64" asChild>
                         <Link href={item.href}>{item.name}</Link>
                     </Button>
                 ))}

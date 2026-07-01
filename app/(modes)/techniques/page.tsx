@@ -44,6 +44,5 @@ export default function TechniquesModePage() {
                 <p>Les données vont jusqu'à la fin de l'arc Thousand-Year Blood War</p>
             </CardFooter>
         </Card>
-        <CharacterSearch/>
     </div>
 }

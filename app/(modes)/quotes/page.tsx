@@ -43,6 +43,6 @@ export default function QuotesModePage() {
                 <p>Les données vont jusqu'à la fin de l'arc Thousand-Year Blood War</p>
             </CardFooter>
         </Card>
-        <CharacterSearch/>
+
     </div>
 }
