@@ -9,10 +9,11 @@ import {
     CardHeader
 } from "@/components/ui/card";
 import { Languages, Shield } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import CharacterSearch from "@/components/shared/CharacterSearch";
 import { bankais, type Bankai } from "@/lib/bankai.data"
 import { type Character } from "@/lib/characters.data";
+import WinnerCard from "@/components/shared/WinnerCard";
 
 export default function BankaiModePage() {
     const [attemptFirstHint, setAttemptFirstHint] = useState(4);
@@ -20,27 +21,40 @@ export default function BankaiModePage() {
     const [randomBankai, setRandomBankai] = useState<Bankai | null>(null);
     const [charactersPlayed, setCharactersPlayed] = useState<Character[]>([]);
 
+    const winnerCardRef = useRef<HTMLDivElement>(null);
+    const charactersTries = charactersPlayed.slice().reverse();
+    const winningCharacter = charactersPlayed.find((char) => char.id === randomBankai?.characterId);
 
-
+    //random du bankai du jour au 1er render
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * bankais.length);
         setRandomBankai(bankais[randomIndex]);
     }, []);
 
-    const handleCharacterSelected = (character: Character) => {
-        setCharactersPlayed(prev => [...prev, character])
-        const isWin = randomBankai?.characterId === character.id
-        const isSecondHintDisabled = attemptFirstHint > 0
-        const isAllHintsUsed = attemptSecondHint <= 0
-        if (!isWin && isSecondHintDisabled) {
-            setAttemptFirstHint(attemptFirstHint - 1)
-        } else if (!isWin && !isSecondHintDisabled && !isAllHintsUsed) {
-            setAttemptSecondHint(attemptSecondHint - 1)
+    //scroll fluide vers la carte de victoire dès qu'elle apparaît dans le DOM
+    useEffect(() => {
+        if (winningCharacter && winnerCardRef.current) {
+            winnerCardRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
         }
-    }
+    }, [winningCharacter]);
+
+    const handleCharacterSelected = (character: Character) => {
+        setCharactersPlayed(prev => [...prev, character]);
+
+        const isWinningGuess = character.id === randomBankai?.characterId;
+        if (isWinningGuess) {
+            return;
+        }
+
+        if (attemptFirstHint > 0) {
+            setAttemptFirstHint(prev => prev - 1);
+        } else if (attemptSecondHint > 0) {
+            setAttemptSecondHint(prev => prev - 1);
+        }
+    };
 
     return (
-        <div className="px-4">
+        <div className="px-4 pb-12">
             <Card className="max-w-lg mx-auto">
                 <CardHeader>
                     <CardTitle>À qui appartient ce bankai ?</CardTitle>
@@ -65,23 +79,36 @@ export default function BankaiModePage() {
                     <p>Les données vont jusqu'à la fin de l'arc Thousand-Year Blood War</p>
                 </CardFooter>
             </Card>
-            <CharacterSearch
-                charactersPlayed={charactersPlayed}
-                onSelect={handleCharacterSelected}
-            />
-            {charactersPlayed.length > 0 && charactersPlayed.map(character => {
-                const isWin = randomBankai?.characterId === character.id
+
+            {/* On masque la recherche si la partie est gagnée */}
+            {!winningCharacter && (
+                <CharacterSearch
+                    charactersPlayed={charactersPlayed}
+                    onSelect={handleCharacterSelected}
+                    allowedCharacterIds={bankais.map(b => b.characterId)}
+                />
+            )}
+
+            {charactersTries.map(character => {
+                const isWin = randomBankai?.characterId === character.id;
                 return (
                     <div key={character.id}
-                        className="max-w-lg mx-auto mt-4 p-4 rounded-lg border"
-                        style={{ background: isWin ? "green" : "red" }}
-                    >
-                        <p className="text-lg font-semibold">
+                        className="max-w-lg mx-auto mt-4 p-4 rounded-lg border font-semibold text-white"
+                        style={{ background: isWin ? "green" : "red" }}>
+                        <p className="text-lg">
                             {character.name}
                         </p>
                     </div>
-                )
+                );
             })}
+
+            {winningCharacter && (
+                <div ref={winnerCardRef} className="max-w-lg mx-auto mt-6">
+                    <WinnerCard
+                        tries={charactersTries.length}
+                        characterToGuess={winningCharacter} />
+                </div>
+            )}
         </div>
-    )
+    );
 }
