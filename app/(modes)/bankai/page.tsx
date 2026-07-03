@@ -14,6 +14,7 @@ import CharacterSearch from "@/components/shared/CharacterSearch";
 import { bankais, type Bankai } from "@/lib/bankai.data"
 import { type Character } from "@/lib/characters.data";
 import WinnerCard from "@/components/shared/WinnerCard";
+import TriesContainer from "@/components/shared/TriesContainer";
 
 export default function BankaiModePage() {
     const [attemptFirstHint, setAttemptFirstHint] = useState(4);
@@ -22,7 +23,7 @@ export default function BankaiModePage() {
     const [charactersPlayed, setCharactersPlayed] = useState<Character[]>([]);
 
     const winnerCardRef = useRef<HTMLDivElement>(null);
-    const charactersTries = charactersPlayed.slice().reverse();
+    const characterTries = charactersPlayed.slice().reverse();
     const winningCharacter = charactersPlayed.find((char) => char.id === randomBankai?.characterId);
 
     //random du bankai du jour au 1er render
@@ -89,24 +90,20 @@ export default function BankaiModePage() {
                 />
             )}
 
-            {charactersTries.map(character => {
+            {characterTries.map(character => {
                 const isWin = randomBankai?.characterId === character.id;
-                return (
-                    <div key={character.id}
-                        className="max-w-lg mx-auto mt-4 p-4 rounded-lg border font-semibold text-white"
-                        style={{ background: isWin ? "green" : "red" }}>
-                        <p className="text-lg">
-                            {character.name}
-                        </p>
-                    </div>
-                );
+                return <TriesContainer
+                    key={character.id}
+                    characterTry={character}
+                    isWin={isWin} />
             })}
 
             {winningCharacter && (
                 <div ref={winnerCardRef} className="max-w-lg mx-auto mt-6">
                     <WinnerCard
-                        tries={charactersTries.length}
-                        characterToGuess={winningCharacter} />
+                        tries={characterTries.length}
+                        characterToGuess={winningCharacter}
+                        gamemode={{ name: "Citations", link: "/quotes" }} />
                 </div>
             )}
         </div>

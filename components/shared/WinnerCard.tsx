@@ -14,9 +14,15 @@ import { Trophy, ArrowRight } from "lucide-react";
 type WinnerCardProps = {
     tries: number
     characterToGuess: Character
+    gamemode: Gamemode
 }
 
-export default function WinnerCard({ tries, characterToGuess }: WinnerCardProps) {
+type Gamemode = {
+    name: string,
+    link: string
+}
+
+export default function WinnerCard({ tries, characterToGuess, gamemode }: WinnerCardProps) {
     return (
         <Card className="border-2 shadow-lg transition-all animate-in fade-in zoom-in-95 duration-500"
             style={{ backgroundColor: "rgba(34, 197, 94, 0.15)", borderColor: "#22c55e" }}>
@@ -45,9 +51,9 @@ export default function WinnerCard({ tries, characterToGuess }: WinnerCardProps)
                 </p>
             </CardContent>
             <CardFooter className="flex justify-center pt-2">
-                <Link href="/quotes" className="w-full sm:w-auto">
+                <Link href={gamemode.link} className="w-full sm:w-auto">
                     <Button className="w-full gap-2 shadow-md" style={{ backgroundColor: "#16a34a", color: "white" }}>
-                        Mode Citations <ArrowRight className="w-4 h-4" />
+                        {"Mode " + gamemode.name} <ArrowRight className="w-4 h-4" />
                     </Button>
                 </Link>
             </CardFooter>
