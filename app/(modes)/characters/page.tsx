@@ -11,10 +11,19 @@ import {
 } from "@/components/ui/card";
 import { useState } from "react"
 import CharacterSearch from "@/components/shared/CharacterSearch";
+import { Character, characters } from "@/lib/characters.data";
+import CharacterTable from "./CharacterTable";
 
 export default function CharactersModePage() {
     const [attemptFirstHint, setAttemptFirstHint] = useState(4);
     const [attemptSecondHint, setAttemptSecondHint] = useState(7);
+    const [charactersPlayed, setCharactersPlayed] = useState<Character[]>([])
+
+    const charactersTries = charactersPlayed.slice().reverse()
+
+    const handleSelectCharacter = (character: Character) => {
+        setCharactersPlayed(prev => [...prev, character])
+    }
 
 
     return <div className="px-4">
@@ -37,6 +46,10 @@ export default function CharactersModePage() {
                 <p>Les données vont jusqu'à la fin de l'arc Thousand-Year Blood War</p>
             </CardFooter>
         </Card>
-  
+        <CharacterSearch charactersPlayed={charactersPlayed}
+            onSelect={handleSelectCharacter}
+            allowedCharacterIds={characters.map(char => char.id)} />
+        {charactersPlayed.length > 0 && <CharacterTable characters={charactersTries} />}
+
     </div>
 }
