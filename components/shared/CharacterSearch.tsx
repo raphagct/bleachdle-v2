@@ -42,7 +42,7 @@ export default function CharacterSearch({ charactersPlayed, onSelect, allowedCha
                 }}
             >
                 <ComboboxInput placeholder="Tape le nom du personnage" />
-                <ComboboxContent collisionAvoidance={{ side: 'none' }}>
+                <ComboboxContent>
                     <ComboboxEmpty>No items found.</ComboboxEmpty>
                     <ComboboxList>
                         {(character) => (

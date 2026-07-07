@@ -13,19 +13,38 @@ import { Label } from "@/components/ui/label";
 import { techniques, type Technique } from "@/lib/techniques.data";
 import { cn } from "@/lib/utils";
 import Image from 'next/image';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import CharacterSearch from "@/components/shared/CharacterSearch";
+import { Character } from "@/lib/characters.data";
+import TriesContainer from "@/components/shared/TriesContainer";
+import WinnerCard from "@/components/shared/WinnerCard";
 
 export default function TechniquesModePage() {
     const [randomTechnique, setRandomTechnique] = useState<Technique | null>(null)
     const [showColors, setShowColors] = useState(true)
     const [progressiveUnblur, setProgressiveUnblur] = useState(true)
+    const [charactersPlayed, setCharactersPlayed] = useState<Character[]>([])
+
+    const winnerCardRef = useRef<HTMLDivElement>(null)
+    const characterTries = charactersPlayed.slice().reverse()
+    const winningCharacter = charactersPlayed.find(char => char.id === randomTechnique?.character_id)
+
+    const handleCharacterSelected = (character: Character) => {
+        setCharactersPlayed(prev => [...prev, character])
+    }
 
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * techniques.length)
         setRandomTechnique(techniques[randomIndex])
     }, [])
 
-    return <div className="px-4">
+    useEffect(() => {
+        if (winningCharacter && winnerCardRef.current) {
+            winnerCardRef.current.scrollIntoView({ behavior: "smooth", block: "center" })
+        }
+    }, [winningCharacter])
+
+    return <div className="px-4 pb-12">
         <Card className="max-w-lg mx-auto">
             <CardHeader>
                 <CardTitle>Quel personnage exécute cette technique ?</CardTitle>
@@ -59,5 +78,30 @@ export default function TechniquesModePage() {
                 <p>Les données vont jusqu'à la fin de l'arc Thousand-Year Blood War</p>
             </CardFooter>
         </Card>
+
+        {!winningCharacter && (
+            <CharacterSearch
+                charactersPlayed={charactersPlayed}
+                onSelect={handleCharacterSelected}
+                allowedCharacterIds={techniques.map(technique => technique.character_id)}
+            />
+        )}
+
+        {characterTries.map(character => {
+            const isCharFound = randomTechnique?.character_id === character.id;
+            return <TriesContainer
+                key={character.id}
+                characterTry={character}
+                isWin={isCharFound} />
+        })}
+
+        {winningCharacter && (
+            <div ref={winnerCardRef} className="max-w-lg mx-auto mt-6">
+                <WinnerCard
+                    tries={characterTries.length}
+                    characterToGuess={winningCharacter}
+                    gamemode={{ name: "Menu Principal", link: "/" }} />
+            </div>
+        )}
     </div>
 }
