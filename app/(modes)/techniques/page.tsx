@@ -11,7 +11,6 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 
 import { techniques, type Technique } from "@/lib/techniques.data";
-import { cn } from "@/lib/utils";
 import Image from 'next/image';
 import { useEffect, useState, useRef } from "react";
 import CharacterSearch from "@/components/shared/CharacterSearch";
@@ -60,18 +59,19 @@ export default function TechniquesModePage() {
             <CardContent className="flex flex-col items-center gap-4">
                 {randomTechnique && (
                     <Image
-                        className={cn(
-                            "transition-all duration-500",
-                            !showColors && "grayscale"
-                        )}
+                        className="transition-all duration-500"
                         src={randomTechnique.gif_url}
                         alt="solution du jour"
                         width={360}
                         height={360}
+                        priority
+                        unoptimized
                         style={{
                             padding: "1rem",
                             objectFit: "contain",
-                            filter: `blur(${getBlurPixels()}px)`
+                            maxWidth: "100%",
+                            height: "auto",
+                            filter: `${!showColors ? "grayscale(100%) " : ""}blur(${getBlurPixels()}px)`
                         }}
                     />
                 )}

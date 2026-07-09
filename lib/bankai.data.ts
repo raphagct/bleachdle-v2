@@ -28,12 +28,12 @@ export const bankais: Bankai[] = [
     {
         id: 5,
         name: "Daiguren Hyōrinmaru",
-        characterId: 29 // Tōshirō Hitsugaya
+        characterId: 31 // Tōshirō Hitsugaya
     },
     {
         id: 6,
         name: "Nozarashi",
-        characterId: 31 // Kenpachi Zaraki
+        characterId: 33 // Kenpachi Zaraki
     },
     {
         id: 7,
@@ -48,21 +48,21 @@ export const bankais: Bankai[] = [
     {
         id: 9,
         name: "Sakashima Yokoshima Happōfusagari",
-        characterId: 39 // Shinji Hirako
+        characterId: 41 // Shinji Hirako
     },
     {
         id: 10,
         name: "Katen Kyōkotsu: Karamatsu Shinjū",
-        characterId: 26 // Shunsui Kyōraku
+        characterId: 27 // Shunsui Kyōraku
     },
     {
         id: 11,
         name: "Suzumushi Tsuishiki: Enma Kōrogi",
-        characterId: 27 // Kaname Tōsen
+        characterId: 29 // Kaname Tōsen
     },
     {
         id: 12,
         name: "Konjiki Ashisogi Jizō",
-        characterId: 35 // Mayuri Kurotsuchi
+        characterId: 37 // Mayuri Kurotsuchi
     }
 ]

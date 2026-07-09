@@ -67,7 +67,7 @@ export default function BankaiModePage() {
                             "{randomBankai?.name}"
                         </p>
                     </blockquote>
-                    <Hints
+                    {charactersPlayed.length >= 1 && <Hints
                         hint1={{
                             icon: <Shield />,
                             description: attemptFirstHint === 0 ?
@@ -77,7 +77,7 @@ export default function BankaiModePage() {
                         hint2={{
                             icon: <Languages />,
                             description: "Indice du bankai traduit dans " + attemptSecondHint + " essais"
-                        }} />
+                        }} />}
                 </CardContent>
                 <CardFooter>
                     <p>Les données vont jusqu'à la fin de l'arc Thousand-Year Blood War</p>

@@ -60,6 +60,7 @@ export default function CharacterRow({ character, randomCharacter }: CharacterRo
                   width={40}
                   height={40}
                   className="rounded-lg object-cover w-10 h-10"
+                  style={{ width: "auto", height: "auto" }}
                 />
               </div>
             ) : Array.isArray(value) ? (

@@ -66,19 +66,21 @@ export default function QuotesModePage() {
                             "{randomQuote?.quote}"
                         </p>
                     </blockquote>
-                    <Hints
-                        hint1={{
-                            icon: <User />,
-                            description: attemptFirstHint === 0
-                                ? `Destinataire : ${randomQuote?.destinataire}`
-                                : `Indice du destinataire dans ${attemptFirstHint} essai${attemptFirstHint > 1 ? "s" : ""}`
-                        }}
-                        hint2={{
-                            icon: <BookOpen />,
-                            description: attemptSecondHint === 0
-                                ? `Arc : ${randomQuote?.arc}`
-                                : `Indice d'arc dans ${attemptSecondHint} essai${attemptSecondHint > 1 ? "s" : ""}`
-                        }} />
+                    {charactersPlayed.length >= 1 && (
+                        <Hints
+                            hint1={{
+                                icon: <User />,
+                                description: attemptFirstHint === 0
+                                    ? `Destinataire : ${randomQuote?.destinataire}`
+                                    : `Indice du destinataire dans ${attemptFirstHint} essai${attemptFirstHint > 1 ? "s" : ""}`
+                            }}
+                            hint2={{
+                                icon: <BookOpen />,
+                                description: attemptSecondHint === 0
+                                    ? `Arc : ${randomQuote?.arc}`
+                                    : `Indice d'arc dans ${attemptSecondHint} essai${attemptSecondHint > 1 ? "s" : ""}`
+                            }} />
+                    )}
                 </CardContent>
                 <CardFooter>
                     <p>Les données vont jusqu'à la fin de l'arc Thousand-Year Blood War</p>

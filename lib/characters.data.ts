@@ -17,7 +17,7 @@ export const characters: Character[] = [
   // ==========================================
   {
     id: 1,
-    image_url: '/ichigo.jpg',
+    image_url: '/img/ichigo.jpg',
     name: 'Ichigo Kurosaki',
     gender: 'Homme',
     race: ['Humain', 'Shinigami', 'Quincy', 'Hollow', 'Fullbringer'],
@@ -29,7 +29,7 @@ export const characters: Character[] = [
   },
   {
     id: 2,
-    image_url: '/rukia.jpg',
+    image_url: '/img/rukia.jpg',
     name: 'Rukia Kuchiki',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -41,7 +41,7 @@ export const characters: Character[] = [
   },
   {
     id: 3,
-    image_url: '/orihime.jpg',
+    image_url: '/img/orihime.jpg',
     name: 'Orihime Inoue',
     gender: 'Femme',
     race: ['Humain'],
@@ -53,7 +53,7 @@ export const characters: Character[] = [
   },
   {
     id: 4,
-    image_url: '/uryu.jpg',
+    image_url: '/img/uryu.jpg',
     name: 'Uryū Ishida',
     gender: 'Homme',
     race: ['Quincy', 'Humain'],
@@ -65,7 +65,7 @@ export const characters: Character[] = [
   },
   {
     id: 5,
-    image_url: '/chad.jpg',
+    image_url: '/img/chad.jpg',
     name: 'Yasutora Sado',
     gender: 'Homme',
     race: ['Humain', 'Fullbringer'],
@@ -77,7 +77,7 @@ export const characters: Character[] = [
   },
   {
     id: 6,
-    image_url: '/urahara.jpg',
+    image_url: '/img/urahara.jpg',
     name: 'Kisuke Urahara',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -89,7 +89,7 @@ export const characters: Character[] = [
   },
   {
     id: 7,
-    image_url: '/yoruichi.jpg',
+    image_url: '/img/yoruichi.jpg',
     name: 'Yoruichi Shihōin',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -101,19 +101,7 @@ export const characters: Character[] = [
   },
   {
     id: 8,
-    image_url: '/tessai.jpg',
-    name: 'Tessai Tsukabishi',
-    gender: 'Homme',
-    race: ['Shinigami'],
-    affiliation: 'Urahara Shop',
-    abilities: ['Kidō'],
-    position: 'Corps des Nécromanciens',
-    introduction_arc: 'Arc du Shinigami Remplaçant',
-    status: 'Vivant',
-  },
-  {
-    id: 9,
-    image_url: '/kon.jpg',
+    image_url: '/img/kon.jpg',
     name: 'Kon',
     gender: 'Homme',
     race: ['Âme Modifiée'],
@@ -124,8 +112,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 10,
-    image_url: '/isshin.jpg',
+    id: 9,
+    image_url: '/img/isshin.jpg',
     name: 'Isshin Kurosaki',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -136,8 +124,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 11,
-    image_url: '/ryuken.jpg',
+    id: 10,
+    image_url: '/img/ryuken.jpg',
     name: 'Ryūken Ishida',
     gender: 'Homme',
     race: ['Quincy', 'Humain'],
@@ -148,8 +136,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 12,
-    image_url: '/zangetsu.jpg',
+    id: 11,
+    image_url: '/img/zangetsu.jpg',
     name: 'Zangetsu',
     gender: 'Homme',
     race: ['Zanpakutō', 'Hollow', 'Quincy'],
@@ -159,13 +147,25 @@ export const characters: Character[] = [
     introduction_arc: 'Arc du Shinigami Remplaçant',
     status: 'Vivant',
   },
+  {
+    id: 12,
+    image_url: '/img/masaki.jpg',
+    name: 'Masaki Kurosaki',
+    gender: 'Femme',
+    race: ['Quincy', 'Humain'],
+    affiliation: 'Karakura',
+    abilities: ['Blut'],
+    position: 'Aucune',
+    introduction_arc: 'Arc du Shinigami Remplaçant',
+    status: 'Décédé',
+  },
 
   // ==========================================
-  // ARC DE LA SOUL SOCIETY (IDs 13-38)
+  // ARC DE LA SOUL SOCIETY (IDs 13-40)
   // ==========================================
   {
     id: 13,
-    image_url: '/kukaku.jpg',
+    image_url: '/img/kukaku.jpg',
     name: 'Kūkaku Shiba',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -177,7 +177,7 @@ export const characters: Character[] = [
   },
   {
     id: 14,
-    image_url: '/ganju.jpg',
+    image_url: '/img/ganju.jpg',
     name: 'Ganju Shiba',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -189,7 +189,7 @@ export const characters: Character[] = [
   },
   {
     id: 15,
-    image_url: '/yamamoto.jpg',
+    image_url: '/img/yamamoto.jpg',
     name: 'Genryūsai Shigekuni Yamamoto',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -201,7 +201,7 @@ export const characters: Character[] = [
   },
   {
     id: 16,
-    image_url: '/chojiro.jpg',
+    image_url: '/img/chojiro.jpg',
     name: 'Chōjirō Sasakibe',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -213,7 +213,7 @@ export const characters: Character[] = [
   },
   {
     id: 17,
-    image_url: '/soifon.jpg',
+    image_url: '/img/soifon.jpg',
     name: 'Soi Fon',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -225,7 +225,7 @@ export const characters: Character[] = [
   },
   {
     id: 18,
-    image_url: '/gin.jpg',
+    image_url: '/img/gin.jpg',
     name: 'Gin Ichimaru',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -237,7 +237,7 @@ export const characters: Character[] = [
   },
   {
     id: 19,
-    image_url: '/kira.jpg',
+    image_url: '/img/kira.jpg',
     name: 'Izuru Kira',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -249,7 +249,7 @@ export const characters: Character[] = [
   },
   {
     id: 20,
-    image_url: '/unohana.jpg',
+    image_url: '/img/unohana.jpg',
     name: 'Retsu Unohana',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -261,7 +261,7 @@ export const characters: Character[] = [
   },
   {
     id: 21,
-    image_url: '/aizen.jpg',
+    image_url: '/img/aizen.jpg',
     name: 'Sōsuke Aizen',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -273,7 +273,7 @@ export const characters: Character[] = [
   },
   {
     id: 22,
-    image_url: '/hinamori.jpg',
+    image_url: '/img/hinamori.jpg',
     name: 'Momo Hinamori',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -285,7 +285,7 @@ export const characters: Character[] = [
   },
   {
     id: 23,
-    image_url: '/byakuya.jpg',
+    image_url: '/img/byakuya.jpg',
     name: 'Byakuya Kuchiki',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -297,7 +297,7 @@ export const characters: Character[] = [
   },
   {
     id: 24,
-    image_url: '/renji.jpg',
+    image_url: '/img/renji.jpg',
     name: 'Renji Abarai',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -309,7 +309,7 @@ export const characters: Character[] = [
   },
   {
     id: 25,
-    image_url: '/komamura.jpg',
+    image_url: '/img/komamura.jpg',
     name: 'Sajin Komamura',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -321,7 +321,19 @@ export const characters: Character[] = [
   },
   {
     id: 26,
-    image_url: '/shunsui.jpg',
+    image_url: '/img/tetsuzaemon.jpg',
+    name: 'Tetsuzaemon Iba',
+    gender: 'Homme',
+    race: ['Shinigami'],
+    affiliation: 'Gotei 13',
+    abilities: ['Shikai'],
+    position: '7ème Division',
+    introduction_arc: 'Arc de la Soul Society',
+    status: 'Vivant',
+  },
+  {
+    id: 27,
+    image_url: '/img/shunsui.jpg',
     name: 'Shunsui Kyōraku',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -332,8 +344,20 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 27,
-    image_url: '/tosen.jpg',
+    id: 28,
+    image_url: '/img/nanao.jpg',
+    name: 'Nanao Ise',
+    gender: 'Femme',
+    race: ['Shinigami'],
+    affiliation: 'Gotei 13',
+    abilities: ['Shikai', 'Kidō'],
+    position: '8ème Division',
+    introduction_arc: 'Arc de la Soul Society',
+    status: 'Vivant',
+  },
+  {
+    id: 29,
+    image_url: '/img/tosen.jpg',
     name: 'Kaname Tōsen',
     gender: 'Homme',
     race: ['Shinigami', 'Visored'],
@@ -344,8 +368,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 28,
-    image_url: '/hisagi.jpg',
+    id: 30,
+    image_url: '/img/hisagi.jpg',
     name: 'Shūhei Hisagi',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -356,8 +380,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 29,
-    image_url: '/toshiro.jpg',
+    id: 31,
+    image_url: '/img/toshiro.jpg',
     name: 'Tōshirō Hitsugaya',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -368,8 +392,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 30,
-    image_url: '/rangiku.jpg',
+    id: 32,
+    image_url: '/img/rangiku.jpg',
     name: 'Rangiku Matsumoto',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -380,8 +404,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 31,
-    image_url: '/zaraki.jpg',
+    id: 33,
+    image_url: '/img/zaraki.jpg',
     name: 'Kenpachi Zaraki',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -392,8 +416,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 32,
-    image_url: '/yachiru.jpg',
+    id: 34,
+    image_url: '/img/yachiru.jpg',
     name: 'Yachiru Kusajishi',
     gender: 'Femme',
     race: ['Shinigami', 'Zanpakutō'],
@@ -404,8 +428,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 33,
-    image_url: '/ikkaku.jpg',
+    id: 35,
+    image_url: '/img/ikkaku.jpg',
     name: 'Ikkaku Madarame',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -416,8 +440,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 34,
-    image_url: '/yumichika.jpg',
+    id: 36,
+    image_url: '/img/yumichika.jpg',
     name: 'Yumichika Ayasegawa',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -428,8 +452,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 35,
-    image_url: '/mayuri.jpg',
+    id: 37,
+    image_url: '/img/mayuri.jpg',
     name: 'Mayuri Kurotsuchi',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -440,8 +464,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 36,
-    image_url: '/nemu.jpg',
+    id: 38,
+    image_url: '/img/nemu.jpg',
     name: 'Nemu Kurotsuchi',
     gender: 'Femme',
     race: ['Shinigami', 'Âme Modifiée'],
@@ -452,8 +476,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 37,
-    image_url: '/ukitake.jpg',
+    id: 39,
+    image_url: '/img/ukitake.jpg',
     name: 'Jūshirō Ukitake',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -464,8 +488,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 38,
-    image_url: '/kaien.jpg',
+    id: 40,
+    image_url: '/img/kaien.jpg',
     name: 'Kaien Shiba',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -477,12 +501,12 @@ export const characters: Character[] = [
   },
 
   // ==========================================
-  // ARC DE HUECO MUNDO (IDs 39-43 & 44, 48-52)
-  // ARC DE LA BATAILLE DE KARAKURA (IDs 45-47)
+  // ARC DE HUECO MUNDO (IDs 41-46 & 50-54)
+  // ARC DE LA BATAILLE DE KARAKURA (IDs 47-49)
   // ==========================================
   {
-    id: 39,
-    image_url: '/shinji.jpg',
+    id: 41,
+    image_url: '/img/shinji.jpg',
     name: 'Shinji Hirako',
     gender: 'Homme',
     race: ['Shinigami', 'Visored'],
@@ -493,8 +517,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 40,
-    image_url: '/kensei.jpg',
+    id: 42,
+    image_url: '/img/kensei.jpg',
     name: 'Kensei Muguruma',
     gender: 'Homme',
     race: ['Shinigami', 'Visored'],
@@ -505,8 +529,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 41,
-    image_url: '/rose.jpg',
+    id: 43,
+    image_url: '/img/rose.jpg',
     name: 'Rōjūrō Ōtoribashi',
     gender: 'Homme',
     race: ['Shinigami', 'Visored'],
@@ -517,8 +541,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 42,
-    image_url: '/hiyori.jpg',
+    id: 44,
+    image_url: '/img/hiyori.jpg',
     name: 'Hiyori Sarugaki',
     gender: 'Femme',
     race: ['Shinigami', 'Visored'],
@@ -529,20 +553,20 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 43,
-    image_url: '/lisa.jpg',
-    name: 'Lisa Yadōmaru',
-    gender: 'Femme',
+    id: 45,
+    image_url: '/img/love.jpg',
+    name: 'Love Aikawa',
+    gender: 'Homme',
     race: ['Shinigami', 'Visored'],
     affiliation: 'Gotei 13',
     abilities: ['Shikai', 'Hollowfication'],
-    position: '8ème Division',
+    position: '7ème Division',
     introduction_arc: 'Arc de Hueco Mundo',
     status: 'Vivant',
   },
   {
-    id: 44,
-    image_url: '/yammy.jpg',
+    id: 46,
+    image_url: '/img/yammy.jpg',
     name: 'Yammy Llargo',
     gender: 'Homme',
     race: ['Arrancar'],
@@ -553,8 +577,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 45,
-    image_url: '/starrk.jpg',
+    id: 47,
+    image_url: '/img/starrk.jpg',
     name: 'Coyote Starrk',
     gender: 'Homme',
     race: ['Arrancar'],
@@ -565,8 +589,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 46,
-    image_url: '/barragan.jpg',
+    id: 48,
+    image_url: '/img/barragan.jpg',
     name: 'Barragan Louisenbairn',
     gender: 'Homme',
     race: ['Arrancar'],
@@ -577,8 +601,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 47,
-    image_url: '/harribel.jpg',
+    id: 49,
+    image_url: '/img/harribel.jpg',
     name: 'Tier Harribel',
     gender: 'Femme',
     race: ['Arrancar'],
@@ -589,8 +613,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 48,
-    image_url: '/nelliel.jpg',
+    id: 50,
+    image_url: '/img/nelliel.jpg',
     name: 'Nelliel Tu Odelschwanck',
     gender: 'Femme',
     race: ['Arrancar'],
@@ -601,8 +625,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 49,
-    image_url: '/ulquiorra.jpg',
+    id: 51,
+    image_url: '/img/ulquiorra.jpg',
     name: 'Ulquiorra Cifer',
     gender: 'Homme',
     race: ['Arrancar'],
@@ -613,8 +637,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 50,
-    image_url: '/nnoitra.jpg',
+    id: 52,
+    image_url: '/img/nnoitra.jpg',
     name: 'Nnoitra Gilga',
     gender: 'Homme',
     race: ['Arrancar'],
@@ -625,8 +649,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 51,
-    image_url: '/grimmjow.jpg',
+    id: 53,
+    image_url: '/img/grimmjow.jpg',
     name: 'Grimmjow Jaegerjaquez',
     gender: 'Homme',
     race: ['Arrancar'],
@@ -637,8 +661,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 52,
-    image_url: '/szayelaporro.jpg',
+    id: 54,
+    image_url: '/img/szayelaporro.jpg',
     name: 'Szayelaporro Granz',
     gender: 'Homme',
     race: ['Arrancar'],
@@ -650,11 +674,11 @@ export const characters: Character[] = [
   },
 
   // ==========================================
-  // ARC DES FULLBRINGERS (IDs 53-56)
+  // ARC DES FULLBRINGERS (IDs 55-58)
   // ==========================================
   {
-    id: 53,
-    image_url: '/ginjo.jpg',
+    id: 55,
+    image_url: '/img/ginjo.jpg',
     name: 'Kūgo Ginjō',
     gender: 'Homme',
     race: ['Humain', 'Shinigami', 'Fullbringer'],
@@ -665,8 +689,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 54,
-    image_url: '/tsukishima.jpg',
+    id: 56,
+    image_url: '/img/tsukishima.jpg',
     name: 'Shūkurō Tsukishima',
     gender: 'Homme',
     race: ['Humain', 'Fullbringer'],
@@ -677,8 +701,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 55,
-    image_url: '/riruka.jpg',
+    id: 57,
+    image_url: '/img/riruka.jpg',
     name: 'Riruka Dokugamine',
     gender: 'Femme',
     race: ['Humain', 'Fullbringer'],
@@ -689,8 +713,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 56,
-    image_url: '/yukio.jpg',
+    id: 58,
+    image_url: '/img/yukio.jpg',
     name: 'Yukio Hans Vorarlberna',
     gender: 'Homme',
     race: ['Humain', 'Fullbringer'],
@@ -702,11 +726,11 @@ export const characters: Character[] = [
   },
 
   // ==========================================
-  // ARC DE LA GUERRE SANGLANTE DE MILLE ANS (TYBW) (IDs 57-70)
+  // ARC DE LA GUERRE SANGLANTE DE MILLE ANS (TYBW) (IDs 59-72)
   // ==========================================
   {
-    id: 57,
-    image_url: '/soulking.jpg',
+    id: 59,
+    image_url: '/img/soulking.jpg',
     name: 'Roi des Esprits',
     gender: 'Homme',
     race: ['Divinité'],
@@ -717,8 +741,8 @@ export const characters: Character[] = [
     status: 'Scellé',
   },
   {
-    id: 58,
-    image_url: '/ichibe.jpg',
+    id: 60,
+    image_url: '/img/ichibe.jpg',
     name: 'Ichibē Hyōsube',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -729,8 +753,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 59,
-    image_url: '/oetsu.jpg',
+    id: 61,
+    image_url: '/img/oetsu.jpg',
     name: 'Ōetsu Nimaiya',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -741,8 +765,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 60,
-    image_url: '/tenjiro.jpg',
+    id: 62,
+    image_url: '/img/tenjiro.jpg',
     name: 'Tenjirō Kirinji',
     gender: 'Homme',
     race: ['Shinigami'],
@@ -753,8 +777,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 61,
-    image_url: '/senjumaru.jpg',
+    id: 63,
+    image_url: '/img/senjumaru.jpg',
     name: 'Senjumaru Shutara',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -765,8 +789,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 62,
-    image_url: '/kirio.jpg',
+    id: 64,
+    image_url: '/img/kirio.jpg',
     name: 'Kirio Hikifune',
     gender: 'Femme',
     race: ['Shinigami'],
@@ -777,8 +801,8 @@ export const characters: Character[] = [
     status: 'Vivant',
   },
   {
-    id: 63,
-    image_url: '/yhwach.jpg',
+    id: 65,
+    image_url: '/img/yhwach.jpg',
     name: 'Yhwach',
     gender: 'Homme',
     race: ['Quincy'],
@@ -789,8 +813,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 64,
-    image_url: '/haschwalth.jpg',
+    id: 66,
+    image_url: '/img/haschwalth.jpg',
     name: 'Jugram Haschwalth',
     gender: 'Homme',
     race: ['Quincy'],
@@ -801,8 +825,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 65,
-    image_url: '/lille.jpg',
+    id: 67,
+    image_url: '/img/lille.jpg',
     name: 'Lille Barro',
     gender: 'Homme',
     race: ['Quincy'],
@@ -813,8 +837,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 66,
-    image_url: '/gerard.jpg',
+    id: 68,
+    image_url: '/img/gerard.jpg',
     name: 'Gerard Valkyrie',
     gender: 'Homme',
     race: ['Quincy'],
@@ -825,8 +849,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 67,
-    image_url: '/pernida.jpg',
+    id: 69,
+    image_url: '/img/pernida.jpg',
     name: 'Pernida Parnkgjas',
     gender: 'Homme',
     race: ['Quincy'],
@@ -837,8 +861,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 68,
-    image_url: '/askin.jpg',
+    id: 70,
+    image_url: '/img/askin.jpg',
     name: 'Askin Nakk Le Vaar',
     gender: 'Homme',
     race: ['Quincy'],
@@ -849,8 +873,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 69,
-    image_url: '/bazzb.jpg',
+    id: 71,
+    image_url: '/img/bazzb.jpg',
     name: 'Bazz-B',
     gender: 'Homme',
     race: ['Quincy'],
@@ -861,8 +885,8 @@ export const characters: Character[] = [
     status: 'Décédé',
   },
   {
-    id: 70,
-    image_url: '/bambietta.jpg',
+    id: 72,
+    image_url: '/img/bambietta.jpg',
     name: 'Bambietta Basterbine',
     gender: 'Femme',
     race: ['Quincy'],

@@ -40,15 +40,17 @@ export default function CharactersModePage() {
                 <CardTitle>Devine le personnage de Bleach d'aujourd'hui!</CardTitle>
             </CardHeader>
             <CardContent>
-                <Hints
-                    hint1={{
-                        icon: <Activity />,
-                        description: "Indice de l'état vital dans " + attemptFirstHint + " essais"
-                    }}
-                    hint2={{
-                        icon: <EyeOff />,
-                        description: "Indice du personnage flouté dans " + attemptSecondHint + " essais"
-                    }} />
+                {charactersPlayed.length >= 1 && (
+                    <Hints
+                        hint1={{
+                            icon: <Activity />,
+                            description: "Indice de l'état vital dans " + attemptFirstHint + " essais"
+                        }}
+                        hint2={{
+                            icon: <EyeOff />,
+                            description: "Indice du personnage flouté dans " + attemptSecondHint + " essais"
+                        }} />
+                )}
             </CardContent>
             <CardFooter>
                 <p>Les données vont jusqu'à la fin de l'arc Thousand-Year Blood War</p>

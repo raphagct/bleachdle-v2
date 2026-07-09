@@ -10,7 +10,7 @@ export const quotes: Quote[] = [
     {
         id: 1,
         quote: "C'est quoi un cœur ? Si je t'ouvre la poitrine, est-ce que je le verrai à l'intérieur ? Si je te fracasse le crâne, est-ce qu'il sera là ?",
-        character_id: 49, // Ulquiorra Cifer
+        character_id: 51, // Ulquiorra Cifer
         destinataire: "Orihime Inoue",
         arc: "Arc de Hueco Mundo"
     },
@@ -45,7 +45,7 @@ export const quotes: Quote[] = [
     {
         id: 6,
         quote: "Quand je combats quelqu'un de fort, je suis tellement excité que je ne peux pas m'empêcher de sourire.",
-        character_id: 31, // Kenpachi Zaraki
+        character_id: 33, // Kenpachi Zaraki
         destinataire: "Ichigo Kurosaki",
         arc: "Arc de la Soul Society"
     },
@@ -59,14 +59,14 @@ export const quotes: Quote[] = [
     {
         id: 8,
         quote: "Dès l'instant où la guerre éclate, les deux camps ont tort. Il n'y a pas de justice dans la guerre.",
-        character_id: 26, // Shunsui Kyōraku
+        character_id: 27, // Shunsui Kyōraku
         destinataire: "Love Aikawa",
         arc: "Arc de la Bataille de Karakura"
     },
     {
         id: 9,
         quote: "Ne m'oublie jamais, Shinigami ! Je suis celui qui t'a amené au seuil de la mort !",
-        character_id: 51, // Grimmjow Jaegerjaquez
+        character_id: 53, // Grimmjow Jaegerjaquez
         destinataire: "Ichigo Kurosaki",
         arc: "Arc de Hueco Mundo"
     },
@@ -87,14 +87,14 @@ export const quotes: Quote[] = [
     {
         id: 12,
         quote: "La perfection est une absurdité. S'il existe quelque chose de parfait, alors il n'y a plus de place pour l'amélioration, plus de place pour l'imagination !",
-        character_id: 35, // Mayuri Kurotsuchi
+        character_id: 37, // Mayuri Kurotsuchi
         destinataire: "Szayelaporro Granz",
         arc: "Arc de Hueco Mundo"
     },
     {
         id: 13,
         quote: "Le conflit n'est pas un péché. C'est le moteur de toute évolution dans ce monde.",
-        character_id: 63, // Yhwach
+        character_id: 65, // Yhwach
         destinataire: "Ichigo Kurosaki",
         arc: "Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)"
     },
@@ -108,7 +108,7 @@ export const quotes: Quote[] = [
     {
         id: 15,
         quote: "Si tu oses faire couler le sang d'Hinamori une seule fois de plus... je te tuerai de mes propres mains !",
-        character_id: 29, // Tōshirō Hitsugaya
+        character_id: 31, // Tōshirō Hitsugaya
         destinataire: "Gin Ichimaru",
         arc: "Arc de la Soul Society"
     },
@@ -129,14 +129,14 @@ export const quotes: Quote[] = [
     {
         id: 18,
         quote: "La justice sans force est impuissante, mais la force sans justice n'est que de la tyrannie. Je suis la voie de la moindre effusion de sang.",
-        character_id: 27, // Kaname Tōsen
+        character_id: 29, // Kaname Tōsen
         destinataire: "Kenpachi Zaraki",
         arc: "Arc de la Soul Society"
     },
     {
         id: 19,
         quote: "Dans ce monde, il y a des choses qu'on ne peut pas comprendre simplement parce qu'on ouvre les yeux.",
-        character_id: 39, // Shinji Hirako
+        character_id: 41, // Shinji Hirako
         destinataire: "Ichigo Kurosaki",
         arc: "Arc de Hueco Mundo"
     },

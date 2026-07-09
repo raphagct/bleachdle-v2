@@ -42,8 +42,8 @@ export default function WinnerCard({ tries, characterToGuess, gamemode }: Winner
                         alt={characterToGuess.name}
                         width={80}
                         height={80}
-                        className="rounded-full border-2 shadow-md object-cover"
-                        style={{ borderColor: "#22c55e" }} />
+                        className="rounded-full border-2 shadow-md object-cover w-20 h-20"
+                        style={{ borderColor: "#22c55e", width: "auto", height: "auto" }} />
                     <span className="text-xl font-bold text-foreground">Tu as trouvé {characterToGuess.name}</span>
                 </div>
                 <p className="text-sm font-medium text-muted-foreground mt-1">
