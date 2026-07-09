@@ -33,6 +33,14 @@ export default function TechniquesModePage() {
         setCharactersPlayed(prev => [...prev, character])
     }
 
+    const getBlurPixels = () => {
+        if (winningCharacter) return 0;
+        if (!progressiveUnblur) return 8;
+        const initialBlur = 12;
+        const reductionPerTry = 1.5;
+        return Math.max(0, initialBlur - characterTries.length * reductionPerTry);
+    };
+
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * techniques.length)
         setRandomTechnique(techniques[randomIndex])
@@ -53,14 +61,18 @@ export default function TechniquesModePage() {
                 {randomTechnique && (
                     <Image
                         className={cn(
-                            "blur-md transition-all duration-300",
+                            "transition-all duration-500",
                             !showColors && "grayscale"
                         )}
                         src={randomTechnique.gif_url}
                         alt="solution du jour"
                         width={360}
                         height={360}
-                        style={{ padding: "1rem", objectFit: "contain" }}
+                        style={{
+                            padding: "1rem",
+                            objectFit: "contain",
+                            filter: `blur(${getBlurPixels()}px)`
+                        }}
                     />
                 )}
                 <div className="flex justify-center gap-8 w-full">

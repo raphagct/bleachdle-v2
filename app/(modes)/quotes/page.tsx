@@ -69,11 +69,15 @@ export default function QuotesModePage() {
                     <Hints
                         hint1={{
                             icon: <User />,
-                            description: "Indice du destinataire dans " + attemptFirstHint + " essais"
+                            description: attemptFirstHint === 0
+                                ? `Destinataire : ${randomQuote?.destinataire}`
+                                : `Indice du destinataire dans ${attemptFirstHint} essai${attemptFirstHint > 1 ? "s" : ""}`
                         }}
                         hint2={{
                             icon: <BookOpen />,
-                            description: "Indice d'arc dans " + attemptSecondHint + " essais"
+                            description: attemptSecondHint === 0
+                                ? `Arc : ${randomQuote?.arc}`
+                                : `Indice d'arc dans ${attemptSecondHint} essai${attemptSecondHint > 1 ? "s" : ""}`
                         }} />
                 </CardContent>
                 <CardFooter>

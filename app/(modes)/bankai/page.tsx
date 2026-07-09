@@ -12,7 +12,7 @@ import { Languages, Shield } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import CharacterSearch from "@/components/shared/CharacterSearch";
 import { bankais, type Bankai } from "@/lib/bankai.data"
-import { type Character } from "@/lib/characters.data";
+import { type Character, characters } from "@/lib/characters.data";
 import WinnerCard from "@/components/shared/WinnerCard";
 import TriesContainer from "@/components/shared/TriesContainer";
 
@@ -25,6 +25,7 @@ export default function BankaiModePage() {
     const winnerCardRef = useRef<HTMLDivElement>(null);
     const characterTries = charactersPlayed.slice().reverse();
     const winningCharacter = charactersPlayed.find((char) => char.id === randomBankai?.characterId);
+    const characterToGuess = characters.find((char) => char.id === randomBankai?.characterId);
 
     //random du bankai du jour au 1er render
     useEffect(() => {
@@ -69,7 +70,9 @@ export default function BankaiModePage() {
                     <Hints
                         hint1={{
                             icon: <Shield />,
-                            description: "Indice du rang de l'utilisateur dans " + attemptFirstHint + " essais"
+                            description: attemptFirstHint === 0 ?
+                                `rang: ${characterToGuess?.position}`
+                                : "Indice du rang de l'utilisateur dans " + attemptFirstHint + " essais"
                         }}
                         hint2={{
                             icon: <Languages />,
