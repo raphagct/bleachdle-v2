@@ -15,6 +15,8 @@ import { Character, characters } from "@/lib/characters.data";
 import CharacterTable from "./CharacterTable";
 import WinnerCard from "@/components/shared/WinnerCard";
 
+const ARC_ORDER = ["Arc du Shinigami Remplaçant", "Arc de la Soul Society","Arc Arrancar","Arc du Shinigami Remplaçant Perdu","Arc de la Guerre Sanglante de Mille Ans"]
+
 export default function CharactersModePage() {
     const [attemptFirstHint, setAttemptFirstHint] = useState(4);
     const [attemptSecondHint, setAttemptSecondHint] = useState(7);

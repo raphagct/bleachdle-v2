@@ -501,8 +501,7 @@ export const characters: Character[] = [
   },
 
   // ==========================================
-  // ARC DE HUECO MUNDO (IDs 41-46 & 50-54)
-  // ARC DE LA BATAILLE DE KARAKURA (IDs 47-49)
+  // ARC ARRANCAR (IDs 41-54)
   // ==========================================
   {
     id: 41,
@@ -513,7 +512,7 @@ export const characters: Character[] = [
     affiliation: 'Gotei 13',
     abilities: ['Shikai', 'Bankai', 'Hollowfication'],
     position: '5ème Division',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Vivant',
   },
   {
@@ -525,7 +524,7 @@ export const characters: Character[] = [
     affiliation: 'Gotei 13',
     abilities: ['Shikai', 'Bankai', 'Hollowfication'],
     position: '9ème Division',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Vivant',
   },
   {
@@ -537,7 +536,7 @@ export const characters: Character[] = [
     affiliation: 'Gotei 13',
     abilities: ['Shikai', 'Bankai', 'Hollowfication'],
     position: '3ème Division',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Vivant',
   },
   {
@@ -549,7 +548,7 @@ export const characters: Character[] = [
     affiliation: 'Gotei 13',
     abilities: ['Shikai', 'Hollowfication'],
     position: '12ème Division',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Vivant',
   },
   {
@@ -561,7 +560,7 @@ export const characters: Character[] = [
     affiliation: 'Gotei 13',
     abilities: ['Shikai', 'Hollowfication'],
     position: '7ème Division',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Vivant',
   },
   {
@@ -573,7 +572,7 @@ export const characters: Character[] = [
     affiliation: "Armée d'Aizen",
     abilities: ['Resurrección'],
     position: 'Cero Espada',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Décédé',
   },
   {
@@ -585,7 +584,7 @@ export const characters: Character[] = [
     affiliation: "Armée d'Aizen",
     abilities: ['Resurrección'],
     position: 'Primera Espada',
-    introduction_arc: 'Arc de la Bataille de Karakura',
+    introduction_arc: 'Arc Arrancar',
     status: 'Décédé',
   },
   {
@@ -597,7 +596,7 @@ export const characters: Character[] = [
     affiliation: "Armée d'Aizen",
     abilities: ['Resurrección'],
     position: 'Segunda Espada',
-    introduction_arc: 'Arc de la Bataille de Karakura',
+    introduction_arc: 'Arc Arrancar',
     status: 'Décédé',
   },
   {
@@ -609,7 +608,7 @@ export const characters: Character[] = [
     affiliation: "Armée d'Aizen",
     abilities: ['Resurrección'],
     position: 'Tres Espada',
-    introduction_arc: 'Arc de la Bataille de Karakura',
+    introduction_arc: 'Arc Arrancar',
     status: 'Vivant',
   },
   {
@@ -621,7 +620,7 @@ export const characters: Character[] = [
     affiliation: "Armée d'Aizen",
     abilities: ['Resurrección'],
     position: 'Tres Espada',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Vivant',
   },
   {
@@ -633,7 +632,7 @@ export const characters: Character[] = [
     affiliation: "Armée d'Aizen",
     abilities: ['Resurrección', 'Segunda Etapa'],
     position: 'Cuatro Espada',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Décédé',
   },
   {
@@ -645,7 +644,7 @@ export const characters: Character[] = [
     affiliation: "Armée d'Aizen",
     abilities: ['Resurrección'],
     position: 'Quinto Espada',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Décédé',
   },
   {
@@ -657,7 +656,7 @@ export const characters: Character[] = [
     affiliation: "Armée d'Aizen",
     abilities: ['Resurrección'],
     position: 'Sexta Espada',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Vivant',
   },
   {
@@ -669,12 +668,12 @@ export const characters: Character[] = [
     affiliation: "Armée d'Aizen",
     abilities: ['Resurrección'],
     position: 'Octava Espada',
-    introduction_arc: 'Arc de Hueco Mundo',
+    introduction_arc: 'Arc Arrancar',
     status: 'Décédé',
   },
 
   // ==========================================
-  // ARC DES FULLBRINGERS (IDs 55-58)
+  // ARC DU SHINIGAMI REMPLAÇANT PERDU (IDs 55-58)
   // ==========================================
   {
     id: 55,
@@ -685,7 +684,7 @@ export const characters: Character[] = [
     affiliation: 'Xcution',
     abilities: ['Fullbring', 'Bankai'],
     position: 'Leader Xcution',
-    introduction_arc: 'Arc des Fullbringers',
+    introduction_arc: 'Arc du Shinigami Remplaçant Perdu',
     status: 'Décédé',
   },
   {
@@ -697,7 +696,7 @@ export const characters: Character[] = [
     affiliation: 'Xcution',
     abilities: ['Fullbring'],
     position: 'Membre Xcution',
-    introduction_arc: 'Arc des Fullbringers',
+    introduction_arc: 'Arc du Shinigami Remplaçant Perdu',
     status: 'Décédé',
   },
   {
@@ -709,7 +708,7 @@ export const characters: Character[] = [
     affiliation: 'Xcution',
     abilities: ['Fullbring'],
     position: 'Membre Xcution',
-    introduction_arc: 'Arc des Fullbringers',
+    introduction_arc: 'Arc du Shinigami Remplaçant Perdu',
     status: 'Vivant',
   },
   {
@@ -721,7 +720,7 @@ export const characters: Character[] = [
     affiliation: 'Xcution',
     abilities: ['Fullbring'],
     position: 'Membre Xcution',
-    introduction_arc: 'Arc des Fullbringers',
+    introduction_arc: 'Arc du Shinigami Remplaçant Perdu',
     status: 'Vivant',
   },
 
@@ -737,7 +736,7 @@ export const characters: Character[] = [
     affiliation: 'Soul Society',
     abilities: ['The Almighty'],
     position: 'Roi des Esprits',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Scellé',
   },
   {
@@ -749,7 +748,7 @@ export const characters: Character[] = [
     affiliation: 'Division 0',
     abilities: ['Shikai', 'Bankai'],
     position: "Moine d'œil",
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Vivant',
   },
   {
@@ -761,7 +760,7 @@ export const characters: Character[] = [
     affiliation: 'Division 0',
     abilities: ['Shikai'],
     position: 'Dieu du Sabre',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Vivant',
   },
   {
@@ -773,7 +772,7 @@ export const characters: Character[] = [
     affiliation: 'Division 0',
     abilities: ['Shikai'],
     position: 'Démon des Sources Chaudes',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Vivant',
   },
   {
@@ -785,7 +784,7 @@ export const characters: Character[] = [
     affiliation: 'Division 0',
     abilities: ['Shikai', 'Bankai'],
     position: 'Grand Tisserand',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Vivant',
   },
   {
@@ -797,7 +796,7 @@ export const characters: Character[] = [
     affiliation: 'Division 0',
     abilities: ['Shikai'],
     position: 'Souverain des Céréales',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Vivant',
   },
   {
@@ -809,7 +808,7 @@ export const characters: Character[] = [
     affiliation: 'Wandenreich',
     abilities: ['The Almighty', 'Schrift'],
     position: 'Aucune',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Décédé',
   },
   {
@@ -821,7 +820,7 @@ export const characters: Character[] = [
     affiliation: 'Wandenreich',
     abilities: ['Schrift'],
     position: 'Sternritter B',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Décédé',
   },
   {
@@ -833,7 +832,7 @@ export const characters: Character[] = [
     affiliation: 'Wandenreich',
     abilities: ['Schrift', 'Vollständig'],
     position: 'Schutzstaffel',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Décédé',
   },
   {
@@ -845,7 +844,7 @@ export const characters: Character[] = [
     affiliation: 'Wandenreich',
     abilities: ['Schrift', 'Vollständig'],
     position: 'Schutzstaffel',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Décédé',
   },
   {
@@ -857,7 +856,7 @@ export const characters: Character[] = [
     affiliation: 'Wandenreich',
     abilities: ['Schrift'],
     position: 'Schutzstaffel',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Décédé',
   },
   {
@@ -869,7 +868,7 @@ export const characters: Character[] = [
     affiliation: 'Wandenreich',
     abilities: ['Schrift', 'Vollständig'],
     position: 'Schutzstaffel',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Décédé',
   },
   {
@@ -881,7 +880,7 @@ export const characters: Character[] = [
     affiliation: 'Wandenreich',
     abilities: ['Schrift'],
     position: 'Sternritter H',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Décédé',
   },
   {
@@ -893,7 +892,7 @@ export const characters: Character[] = [
     affiliation: 'Wandenreich',
     abilities: ['Schrift', 'Vollständig'],
     position: 'Sternritter E',
-    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans (Thousand-Year Blood War)',
+    introduction_arc: 'Arc de la Guerre Sanglante de Mille Ans',
     status: 'Décédé',
   },
 ];

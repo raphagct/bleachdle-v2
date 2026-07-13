@@ -64,5 +64,55 @@ export const bankais: Bankai[] = [
         id: 12,
         name: "Konjiki Ashisogi Jizō",
         characterId: 37 // Mayuri Kurotsuchi
+    },
+    {
+        id: 13,
+        name: "Zanka no Tachi",
+        characterId: 15 // Genryūsai Shigekuni Yamamoto
+    },
+    {
+        id: 14,
+        name: "Kōkō Gonryō Rikyū",
+        characterId: 16 // Chōjirō Sasakibe
+    },
+    {
+        id: 15,
+        name: "Jakuhō Raikōben",
+        characterId: 17 // Soi Fon
+    },
+    {
+        id: 16,
+        name: "Minazuki",
+        characterId: 20 // Retsu Unohana
+    },
+    {
+        id: 17,
+        name: "Kokujō Tengen Myō'ō",
+        characterId: 25 // Sajin Komamura
+    },
+    {
+        id: 18,
+        name: "Ryūmon Hōzukimaru",
+        characterId: 35 // Ikkaku Madarame
+    },
+    {
+        id: 19,
+        name: "Tekken Tachikaze",
+        characterId: 42 // Kensei Muguruma
+    },
+    {
+        id: 20,
+        name: "Kinshara Butōdan",
+        characterId: 43 // Rōjūrō Ōtoribashi
+    },
+    {
+        id: 21,
+        name: "Shirafude Ichimonji",
+        characterId: 60 // Ichibē Hyōsube
+    },
+    {
+        id: 22,
+        name: "Shatatsu Karagara Shigarami no Tsuji",
+        characterId: 63 // Senjumaru Shutara
     }
 ]

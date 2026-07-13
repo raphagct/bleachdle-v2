@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Inconsolata } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const inconsolata = Inconsolata({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -40,29 +42,42 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={cn("font-sans", inconsolata.variable)}>
+    <html lang="fr" className={cn("font-sans", inconsolata.variable)} suppressHydrationWarning>
       <body className="min-h-screen relative">
-        {children}
-        <div className="fixed bottom-4 left-4 z-50 flex items-center gap-4">
-          <a
-            href="https://github.com/raphagct"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm font-medium text-muted-foreground/70 hover:text-foreground transition-colors duration-200"
-          >
-            <GitHubLogo className="size-4" />
-            <span>raphagct</span>
-          </a>
-          <a
-            href="https://x.com/raphagct"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm font-medium text-muted-foreground/70 hover:text-foreground transition-colors duration-200"
-          >
-            <XLogo className="size-4" />
-            <span>@raphagct</span>
-          </a>
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {/* Bouton de changement de thème en haut à droite */}
+          <div className="fixed top-4 right-4 z-50">
+            <ThemeToggle />
+          </div>
+
+          {children}
+
+          <div className="fixed bottom-4 left-4 z-50 flex items-center gap-4">
+            <a
+              href="https://github.com/raphagct"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground/70 hover:text-foreground transition-colors duration-200"
+            >
+              <GitHubLogo className="size-4" />
+              <span>raphagct</span>
+            </a>
+            <a
+              href="https://x.com/raphagct"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground/70 hover:text-foreground transition-colors duration-200"
+            >
+              <XLogo className="size-4" />
+              <span>@raphagct</span>
+            </a>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

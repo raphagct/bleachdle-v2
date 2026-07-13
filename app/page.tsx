@@ -11,9 +11,13 @@ const MENU_ITEMS = [
 export default function Page() {
     return (
         <main>
-            <div className="flex flex-col items-center mt-12 mb-8 gap-2">
-                <h1 className="text-5xl font-black tracking-tight text-primary">BLEACHDLE</h1>
-                <h2 className="text-xl text-muted-foreground font-medium">Devine les personnages de BLEACH</h2>
+            <div className="flex flex-col items-center mt-16 mb-8 gap-2">
+                <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase">
+                    BLEACHDLE
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground font-medium tracking-wide">
+                    Devine les personnages de BLEACH
+                </p>
             </div>
 
             <div className="flex flex-col items-center gap-4 mt-6">

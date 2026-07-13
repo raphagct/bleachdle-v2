@@ -11,6 +11,8 @@ import {
     BreadcrumbPage
 } from "@/components/ui/breadcrumb";
 import { DotIcon } from "lucide-react";
+import Link from "next/link";
+import Stepper from "../shared/Stepper";
 
 const MODES = [
     { name: "Characters", href: "/characters" },
@@ -25,31 +27,11 @@ export function ModeHeader() {
     return (
         <div className="mb-8">
             <div className="flex flex-col items-center mt-4 mb-8 gap-2">
-                <h1 className="text-5xl font-black tracking-tight text-primary">BLEACHDLE</h1>
+                <h1 className="text-5xl font-black tracking-tight text-primary"
+                ><Link href={"/"}>BLEACHDLE</Link>
+                </h1>
             </div>
-            <Breadcrumb>
-                <BreadcrumbList className="justify-center">
-                    {MODES.map((mode, index) => {
-                        const isActive = pathname === mode.href;
-                        return (
-                            <React.Fragment key={mode.href}>
-                                <BreadcrumbItem>
-                                    {isActive ? (
-                                        <BreadcrumbPage>{mode.name}</BreadcrumbPage>
-                                    ) : (
-                                        <BreadcrumbLink href={mode.href}>{mode.name}</BreadcrumbLink>
-                                    )}
-                                </BreadcrumbItem>
-                                {index < MODES.length - 1 && (
-                                    <BreadcrumbSeparator>
-                                        <DotIcon />
-                                    </BreadcrumbSeparator>
-                                )}
-                            </React.Fragment>
-                        );
-                    })}
-                </BreadcrumbList>
-            </Breadcrumb>
+            <Stepper/>
         </div>
     );
 }
