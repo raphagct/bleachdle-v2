@@ -32,10 +32,13 @@ export default function QuotesModePage() {
         setRandomQuote(quotes[randomIndex]);
     }, []);
 
-    // Scroll fluide vers la carte de victoire dès qu'elle apparaît dans le DOM
+    // Scroll fluide vers la carte de victoire après 1200ms
     useEffect(() => {
-        if (winningCharacter && winnerCardRef.current) {
-            winnerCardRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (winningCharacter) {
+            const timeoutId = setTimeout(() => {
+                winnerCardRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+            }, 1200);
+            return () => clearTimeout(timeoutId);
         }
     }, [winningCharacter]);
 
@@ -49,7 +52,8 @@ export default function QuotesModePage() {
 
         if (attemptFirstHint > 0) {
             setAttemptFirstHint(prev => prev - 1);
-        } else if (attemptSecondHint > 0) {
+        }
+        if (attemptSecondHint > 0) {
             setAttemptSecondHint(prev => prev - 1);
         }
     };
@@ -71,14 +75,18 @@ export default function QuotesModePage() {
                             hint1={{
                                 icon: <User />,
                                 description: attemptFirstHint === 0
-                                    ? `Destinataire : ${randomQuote?.destinataire}`
-                                    : `Indice du destinataire dans ${attemptFirstHint} essai${attemptFirstHint > 1 ? "s" : ""}`
+                                    ? "Indice du destinataire"
+                                    : `Indice du destinataire dans ${attemptFirstHint} essai${attemptFirstHint > 1 ? "s" : ""}`,
+                                hint: `Destinataire : ${randomQuote?.destinataire}`,
+                                isUnlocked: attemptFirstHint === 0
                             }}
                             hint2={{
                                 icon: <BookOpen />,
                                 description: attemptSecondHint === 0
-                                    ? `Arc : ${randomQuote?.arc}`
-                                    : `Indice d'arc dans ${attemptSecondHint} essai${attemptSecondHint > 1 ? "s" : ""}`
+                                    ? "Indice d'arc"
+                                    : `Indice d'arc dans ${attemptSecondHint} essai${attemptSecondHint > 1 ? "s" : ""}`,
+                                hint: `Arc : ${randomQuote?.arc}`,
+                                isUnlocked: attemptSecondHint === 0
                             }} />
                     )}
                 </CardContent>

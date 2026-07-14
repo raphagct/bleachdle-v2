@@ -33,10 +33,13 @@ export default function BankaiModePage() {
         setRandomBankai(bankais[randomIndex]);
     }, []);
 
-    //scroll fluide vers la carte de victoire dès qu'elle apparaît dans le DOM
+    //scroll fluide vers la carte de victoire après 1200ms pour apprécier le hit de victoire
     useEffect(() => {
-        if (winningCharacter && winnerCardRef.current) {
-            winnerCardRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (winningCharacter) {
+            const timeoutId = setTimeout(() => {
+                winnerCardRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+            }, 1200);
+            return () => clearTimeout(timeoutId);
         }
     }, [winningCharacter]);
 
@@ -50,7 +53,8 @@ export default function BankaiModePage() {
 
         if (attemptFirstHint > 0) {
             setAttemptFirstHint(prev => prev - 1);
-        } else if (attemptSecondHint > 0) {
+        }
+        if (attemptSecondHint > 0) {
             setAttemptSecondHint(prev => prev - 1);
         }
     };
@@ -71,12 +75,18 @@ export default function BankaiModePage() {
                         hint1={{
                             icon: <Shield />,
                             description: attemptFirstHint === 0 ?
-                                `rang: ${characterToGuess?.position}`
-                                : "Indice du rang de l'utilisateur dans " + attemptFirstHint + " essais"
+                                "Indice du rang de l'utilisateur"
+                                : `Indice du rang de l'utilisateur dans ${attemptFirstHint} essai${attemptFirstHint > 1 ? "s" : ""}`,
+                            hint: `Rang : ${characterToGuess?.position}`,
+                            isUnlocked: attemptFirstHint === 0
                         }}
                         hint2={{
                             icon: <Languages />,
-                            description: "Indice du bankai traduit dans " + attemptSecondHint + " essais"
+                            description: attemptSecondHint === 0
+                                ? "Indice du bankai traduit"
+                                : `Indice du bankai traduit dans ${attemptSecondHint} essai${attemptSecondHint > 1 ? "s" : ""}`,
+                            hint: `Traduction : ${randomBankai?.translation || "Non disponible"}`,
+                            isUnlocked: attemptSecondHint === 0
                         }} />}
                 </CardContent>
                 <CardFooter>

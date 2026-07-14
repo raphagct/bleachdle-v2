@@ -46,8 +46,11 @@ export default function TechniquesModePage() {
     }, [])
 
     useEffect(() => {
-        if (winningCharacter && winnerCardRef.current) {
-            winnerCardRef.current.scrollIntoView({ behavior: "smooth", block: "center" })
+        if (winningCharacter) {
+            const timeoutId = setTimeout(() => {
+                winnerCardRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })
+            }, 1200)
+            return () => clearTimeout(timeoutId)
         }
     }, [winningCharacter])
 

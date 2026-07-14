@@ -50,31 +50,48 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* Inner World background */}
+          <div
+            className="fixed inset-0 z-0 pointer-events-none opacity-[0.04] dark:opacity-[0.07] dark:invert"
+            style={{
+              backgroundImage: "url('/img/inner-world-bg.png')",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+
           {/* Bouton de changement de thème en haut à droite */}
-          <div className="fixed top-4 right-4 z-50">
+          <div className="absolute top-1.5 right-2 sm:top-2 sm:right-3 z-50">
             <ThemeToggle />
           </div>
 
           {children}
 
-          <div className="fixed bottom-4 left-4 z-50 flex items-center gap-4">
-            <a
-              href="https://github.com/raphagct"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground/70 hover:text-foreground transition-colors duration-200"
-            >
-              <GitHubLogo className="size-4" />
-              <span>raphagct</span>
-            </a>
+          <div className="absolute top-1.5 left-2 sm:top-2 sm:left-3 z-50 flex flex-col gap-1 items-start">
             <a
               href="https://x.com/raphagct"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground/70 hover:text-foreground transition-colors duration-200"
+              className="flex items-center gap-1.5 text-[11px] sm:text-xs font-medium text-muted-foreground/80 hover:text-foreground transition-colors duration-200 group"
             >
-              <XLogo className="size-4" />
-              <span>@raphagct</span>
+              <span>DM me for any suggestion -</span>
+              <span className="flex items-center gap-1 font-semibold underline underline-offset-2">
+                <XLogo className="size-3.5 sm:size-4 shrink-0 group-hover:scale-110 transition-transform" />
+                @raphagct
+              </span>
+            </a>
+            <a
+              href="https://github.com/raphagct"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[11px] sm:text-xs font-medium text-muted-foreground/80 hover:text-foreground transition-colors duration-200 group"
+            >
+              <span>Contribute to the project (PR) -</span>
+              <span className="flex items-center gap-1 font-semibold underline underline-offset-2">
+                <GitHubLogo className="size-3.5 sm:size-4 shrink-0 group-hover:scale-110 transition-transform" />
+                raphagct
+              </span>
             </a>
           </div>
         </ThemeProvider>

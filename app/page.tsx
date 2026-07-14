@@ -10,7 +10,7 @@ const MENU_ITEMS = [
 
 export default function Page() {
     return (
-        <main>
+        <main className="relative z-10">
             <div className="flex flex-col items-center mt-16 mb-8 gap-2">
                 <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase">
                     BLEACHDLE

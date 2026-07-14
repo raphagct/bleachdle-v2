@@ -22,15 +22,38 @@ export default function CharacterSearch({ charactersPlayed, onSelect, allowedCha
     const [inputValue, setInputValue] = useState("")
     const [open, setOpen] = useState(false)
     const containerRef = useRef<HTMLDivElement>(null)
+    const inputValueRef = useRef(inputValue)
+    inputValueRef.current = inputValue
 
-    const availableCharacters = characters.filter(c =>
-        !charactersPlayed.some(played => played.id === c.id) &&
-        (!allowedCharacterIds || allowedCharacterIds.includes(c.id))
-    )
+    const availableCharacters = characters
+        .filter(c =>
+            !charactersPlayed.some(played => played.id === c.id) &&
+            (!allowedCharacterIds || allowedCharacterIds.includes(c.id))
+        )
+        .sort((a, b) => {
+            const query = inputValue.trim().toLowerCase()
+            if (!query) {
+                return a.name.localeCompare(b.name, 'fr')
+            }
+            const nameA = a.name.toLowerCase()
+            const nameB = b.name.toLowerCase()
+            const startsA = nameA.startsWith(query)
+            const startsB = nameB.startsWith(query)
+
+            if (startsA && !startsB) return -1
+            if (!startsA && startsB) return 1
+
+            return a.name.localeCompare(b.name, 'fr')
+        })
 
     const handleInputValueChange = (value: string) => {
+        inputValueRef.current = value
         setInputValue(value)
-        setOpen(value.trim().length >= 1)
+        if (value.trim().length > 0) {
+            setOpen(true)
+        } else {
+            setOpen(false)
+        }
     }
 
     useEffect(() => {
@@ -61,9 +84,11 @@ export default function CharacterSearch({ charactersPlayed, onSelect, allowedCha
                 onInputValueChange={handleInputValueChange}
                 open={open}
                 onOpenChange={(nextOpen) => {
-                    if (!nextOpen) {
+                    if (nextOpen && inputValueRef.current.trim().length === 0) {
                         setOpen(false)
+                        return
                     }
+                    setOpen(nextOpen)
                 }}
                 onValueChange={(selectedCharacter) => {
                     if (selectedCharacter) {
@@ -73,7 +98,7 @@ export default function CharacterSearch({ charactersPlayed, onSelect, allowedCha
                     }
                 }}
             >
-                <ComboboxInput placeholder="Tape le nom du personnage..." className="h-12 rounded-xl border-2 shadow-sm" />
+                <ComboboxInput placeholder="Tape le nom du personnage..." className="h-12 rounded-xl border-2 shadow-sm !bg-background" />
                 <ComboboxContent side="bottom" sideOffset={6} collisionAvoidance={{ side: "none" }}>
                     <ComboboxEmpty className="py-6 text-center text-sm text-muted-foreground">
                         Aucun personnage ne correspond à « <span className="font-semibold text-foreground">{inputValue}</span> »
