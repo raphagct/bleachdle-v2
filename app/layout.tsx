@@ -61,39 +61,41 @@ export default function RootLayout({
             }}
           />
 
-          {/* Bouton de changement de thème en haut à droite */}
-          <div className="absolute top-1.5 right-2 sm:top-2 sm:right-3 z-50">
-            <ThemeToggle />
-          </div>
+          {/* Barre d'en-tête supérieure avec réseaux sociaux à gauche et thème à droite */}
+          <header className="w-full px-4 sm:px-6 py-2 sm:py-3 flex items-start justify-between gap-4 z-50 relative">
+            <div className="flex flex-col items-start gap-1 text-[11px] sm:text-xs font-medium text-muted-foreground/90">
+              <a
+                href="https://x.com/raphagct"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 hover:text-foreground transition-colors duration-200 group"
+              >
+                <span>DM me for any suggestion -</span>
+                <span className="flex items-center gap-1 font-semibold underline underline-offset-2 text-foreground/90 group-hover:text-primary">
+                  <XLogo className="size-3.5 sm:size-4 shrink-0 group-hover:scale-110 transition-transform" />
+                  @raphagct
+                </span>
+              </a>
+              <a
+                href="https://github.com/raphagct"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 hover:text-foreground transition-colors duration-200 group"
+              >
+                <span>Contribute to the project (PR) -</span>
+                <span className="flex items-center gap-1 font-semibold underline underline-offset-2 text-foreground/90 group-hover:text-primary">
+                  <GitHubLogo className="size-3.5 sm:size-4 shrink-0 group-hover:scale-110 transition-transform" />
+                  raphagct
+                </span>
+              </a>
+            </div>
+
+            <div className="shrink-0">
+              <ThemeToggle />
+            </div>
+          </header>
 
           {children}
-
-          <div className="absolute top-1.5 left-2 sm:top-2 sm:left-3 z-50 flex flex-col gap-1 items-start">
-            <a
-              href="https://x.com/raphagct"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[11px] sm:text-xs font-medium text-muted-foreground/80 hover:text-foreground transition-colors duration-200 group"
-            >
-              <span>DM me for any suggestion -</span>
-              <span className="flex items-center gap-1 font-semibold underline underline-offset-2">
-                <XLogo className="size-3.5 sm:size-4 shrink-0 group-hover:scale-110 transition-transform" />
-                @raphagct
-              </span>
-            </a>
-            <a
-              href="https://github.com/raphagct"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[11px] sm:text-xs font-medium text-muted-foreground/80 hover:text-foreground transition-colors duration-200 group"
-            >
-              <span>Contribute to the project (PR) -</span>
-              <span className="flex items-center gap-1 font-semibold underline underline-offset-2">
-                <GitHubLogo className="size-3.5 sm:size-4 shrink-0 group-hover:scale-110 transition-transform" />
-                raphagct
-              </span>
-            </a>
-          </div>
         </ThemeProvider>
       </body>
     </html>

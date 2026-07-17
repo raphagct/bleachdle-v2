@@ -15,9 +15,9 @@ import Link from "next/link";
 import Stepper from "../shared/Stepper";
 
 const MODES = [
-    { name: "Characters", href: "/characters" },
+    { name: "Classic", href: "/classic" },
     { name: "Bankai", href: "/bankai" },
-    { name: "Quotes", href: "/quotes" },
+    { name: "Citations", href: "/quotes" },
     { name: "Techniques", href: "/techniques" }
 ];
 

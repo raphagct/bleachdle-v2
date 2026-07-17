@@ -1,5 +1,4 @@
-import { Character } from "@/lib/characters.data"
-import CharacterRow from "./CharacterRow"
+import ClassicRow from "./ClassicRow"
 import {
     Table,
     TableBody,
@@ -8,14 +7,15 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { cn } from "@/lib/utils";
+import type { ClassicGuessResult } from "@/lib/actions/types";
 
-export type CharacterColumnConfig = {
-    key: keyof Character;
+export type ClassicColumnConfig = {
+    key: string;
     label: string;
     className?: string;
 };
 
-export const CHARACTER_COLUMNS: CharacterColumnConfig[] = [
+export const CLASSIC_COLUMNS: ClassicColumnConfig[] = [
     { key: "name", label: "Personnage", className: "w-[68px] sm:w-[76px] text-center font-semibold" },
     { key: "gender", label: "Genre", className: "w-[75px] text-center" },
     { key: "race", label: "Race", className: "w-[100px] text-center" },
@@ -25,13 +25,12 @@ export const CHARACTER_COLUMNS: CharacterColumnConfig[] = [
     { key: "introduction_arc", label: "Arc d'intro", className: "w-[160px] text-center" },
 ];
 
-export type CharacterTableProps = {
-    characters: Character[]
-    randomCharacter: Character
+export type ClassicTableProps = {
+    guesses: ClassicGuessResult[];
 }
 
-export default function CharacterTable({ characters, randomCharacter }: CharacterTableProps) {
-    if (characters.length === 0) return null;
+export default function ClassicTable({ guesses }: ClassicTableProps) {
+    if (guesses.length === 0) return null;
 
     return (
         <div className="max-w-4xl mx-auto mt-6 px-1">
@@ -39,7 +38,7 @@ export default function CharacterTable({ characters, randomCharacter }: Characte
                 <Table className="w-full border-collapse">
                     <TableHeader className="bg-muted border-b border-border/50">
                         <TableRow className="hover:bg-transparent border-none">
-                            {CHARACTER_COLUMNS.map((col) => (
+                            {CLASSIC_COLUMNS.map((col) => (
                                 <TableHead key={col.key} className={cn("text-xs sm:text-sm font-semibold text-foreground py-3 px-1.5 text-center align-middle h-auto select-none border-r border-border/20 last:border-r-0", col.className)}>
                                     {col.label}
                                 </TableHead>
@@ -47,8 +46,8 @@ export default function CharacterTable({ characters, randomCharacter }: Characte
                         </TableRow>
                     </TableHeader>
                     <TableBody>
-                        {characters.map((char) => (
-                            <CharacterRow key={char.id} character={char} randomCharacter={randomCharacter} />
+                        {guesses.map((guess) => (
+                            <ClassicRow key={guess.characterId} guess={guess} />
                         ))}
                     </TableBody>
                 </Table>

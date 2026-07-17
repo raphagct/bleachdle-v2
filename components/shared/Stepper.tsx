@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const MODES = [
-    { name: "Characters", href: "/characters", icon: <Users className="size-4" /> },
+    { name: "Classic", href: "/classic", icon: <Users className="size-4" /> },
     { name: "Bankai", href: "/bankai", icon: <Sword className="size-4" /> },
-    { name: "Quotes", href: "/quotes", icon: <Quote className="size-4" /> },
+    { name: "Citations", href: "/quotes", icon: <Quote className="size-4" /> },
     { name: "Techniques", href: "/techniques", icon: <Sparkles className="size-4" /> }
 ];
 

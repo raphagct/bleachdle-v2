@@ -8,26 +8,26 @@ import {
     ComboboxItem,
     ComboboxList,
 } from "@/components/ui/combobox"
-import { characters, type Character } from "@/lib/characters.data"
+import { charactersPublic, type CharacterPublic } from "@/lib/characters.public"
 import Image from 'next/image'
 import { useState, useEffect, useRef } from "react"
 
 interface CharacterSearchProps {
-    charactersPlayed: Character[]
-    onSelect: (character: Character) => void
+    playedIds: number[]
+    onSelect: (character: CharacterPublic) => void
     allowedCharacterIds?: number[]
 }
 
-export default function CharacterSearch({ charactersPlayed, onSelect, allowedCharacterIds }: CharacterSearchProps) {
+export default function CharacterSearch({ playedIds, onSelect, allowedCharacterIds }: CharacterSearchProps) {
     const [inputValue, setInputValue] = useState("")
     const [open, setOpen] = useState(false)
     const containerRef = useRef<HTMLDivElement>(null)
     const inputValueRef = useRef(inputValue)
     inputValueRef.current = inputValue
 
-    const availableCharacters = characters
+    const availableCharacters = charactersPublic
         .filter(c =>
-            !charactersPlayed.some(played => played.id === c.id) &&
+            !playedIds.includes(c.id) &&
             (!allowedCharacterIds || allowedCharacterIds.includes(c.id))
         )
         .sort((a, b) => {
@@ -76,7 +76,7 @@ export default function CharacterSearch({ charactersPlayed, onSelect, allowedCha
 
     return (
         <div ref={containerRef} className="relative max-w-[400px] mx-auto mt-6">
-            <Combobox<Character>
+            <Combobox<CharacterPublic>
                 items={availableCharacters}
                 itemToStringLabel={(character) => character.name}
                 value={null}
